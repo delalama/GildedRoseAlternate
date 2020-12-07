@@ -68,6 +68,7 @@ public class UpdateController {
 This controller has the `ItemUpdaterSetter` and `ItemUpdater` as a dependency, why?
 - Because we need to implement different code branches to split the logic into readable and small logic
 - Because we like the maintainable code and we don't know if we will add different items in the future.
+- Because is possible to need in the future an item classifier.
 
 So this `update()` will only set the `ItemUpdater` and execute the `update()`.
 
