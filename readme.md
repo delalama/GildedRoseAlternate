@@ -54,7 +54,7 @@ public class UpdateController {
     ItemUpdater itemUpdater;
     ItemUpdaterSetter itemUpdaterSetter = new ItemUpdaterSetter();
 
-    public void run(Item item) {
+    public void update(Item item) {
         setItemUpdater(item);
         itemUpdater.update(item);
     }
@@ -69,7 +69,7 @@ This controller has the `ItemUpdaterSetter` and `ItemUpdater` as a dependency, w
 - Because we need to implement different code branches to split the logic into readable and small logic
 - Because we like the maintainable code and we don't know if we will add different items in the future.
 
-So this `run()` will only set the `ItemUpdater` and execute the `update()`.
+So this `update()` will only set the `ItemUpdater` and execute the `update()`.
 
 ### ItemUpdaterSetter
 
@@ -280,3 +280,4 @@ public class ConjuredUpdater implements ItemUpdater {
 ```
 
 And that's all, thanks to the IDE we've done the job.
+If you find a more readable option please comment it, thanks
